@@ -14,11 +14,6 @@ APP.use(EXPRESS.static('./public'));
 const API_URL = (`http://swapi.co/api/people/`)
 
 
-// APP.get('API/search', searchCharacters);
-
-// let searchCharacters = (request, response) => {
-// }
-
 let searchString = 'luke';
 
 let options = { 
