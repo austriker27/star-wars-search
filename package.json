@@ -4,7 +4,10 @@
   "description": "just another star wars search app, beautifully styled",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest -i --coverage",
+    "watch": "webpack-dev-server --inline --hot",
+    "start": "node index.js",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",

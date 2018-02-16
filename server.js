@@ -14,15 +14,16 @@ APP.use(EXPRESS.static('./public'));
 const API_URL = (`http://swapi.co/api/people/`)
 
 
-let searchString = 'luke';
+let query = 'luke';
 
 let options = { 
   method: 'GET',
   url: API_URL,
   qs: { 
-    search: 'luke'
+    search: `${query}`
   },
-  };
+};
+
 
 request(options, (error, response, body) => {
   if (error) 
