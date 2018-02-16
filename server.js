@@ -14,23 +14,31 @@ APP.use(EXPRESS.static('./public'));
 const API_URL = (`http://swapi.co/api/people/`)
 
 
-APP.get('API/search', searchCharacters);
+// APP.get('API/search', searchCharacters);
 
-let searchCharacters = (request, response) => {
-}
+// let searchCharacters = (request, response) => {
+// }
+
+let searchString = 'luke';
 
 let options = { 
   method: 'GET',
   url: API_URL,
   qs: { 
-    search: '${searchString}'
+    search: 'luke'
   },
   };
 
 request(options, (error, response, body) => {
-  if (error) throw new Error(error);
-
-  console.log('body:', body);
+  if (error) 
+    throw new Error(error);
+  else {
+    let characterResult = JSON.parse(body);
+    let characterResultName = JSON.parse(body).results[0].name
+    let characterResultGender = JSON.parse(body).results[0].gender
+    let characterResultHairColor = JSON.parse(body).results[0].hair_color
+    let characterResultEyeColor = JSON.parse(body).results[0].eye_color
+  }
 });
 
 
