@@ -4,7 +4,10 @@
   "description": "just another star wars search app, beautifully styled",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest -i --coverage",
+    "watch": "webpack-dev-server --inline --hot",
+    "start": "node index.js",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -38,6 +41,7 @@
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
+    "request": "^2.83.0",
     "resolve-url-loader": "^2.2.1",
     "sass-loader": "^6.0.6",
     "superagent": "^3.8.2",
