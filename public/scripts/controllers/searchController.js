@@ -1,14 +1,10 @@
-'use strict';
+// 'use strict';
 
-var app = app || {};
+// var app = app || {};
 
-(function(module){
-  let searchController = {};
-
-  searchController.index = function(){
-    $.get('/api/search')
-      
-  }
+// (function(module){
+  
+//   app.CharacterSearchResults(app.render)
 
 
-})
+// })(app);
