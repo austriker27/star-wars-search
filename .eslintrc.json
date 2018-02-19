@@ -1,0 +1,40 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "commonjs": true,
+    "jest": true,
+    "es6": true,
+    "jquery": true
+  },
+  "globals": {
+    "err": true,
+    "req": true,
+    "res": true,
+    "next": true,
+    "__API_URI__": false,
+    "__TITLE__": false,
+    "__DEBUG__": false
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "module": true,
+      "jsx": true
+    }
+  },
+  "rules": {
+    "no-console": "off",
+    "no-unused-vars": "off",
+    "indent": [ "error", 2, { "SwitchCase": 1 } ],
+    "react/prop-types": [0],
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "space-infix-ops": ["error", {"int32Hint": false}],
+    "comma-dangle": ["error", "always-multiline"],
+    "semi": [ "error", "always" ]
+  },
+  "plugins": ["react"]
+}

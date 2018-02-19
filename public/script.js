@@ -18,5 +18,5 @@ $.ajax({
   error: () => {
     $('#search-form').html('<p class="error">Uh oh, no results found. Try that again soon. </p>');
 
-  }
-})
+  },
+});
