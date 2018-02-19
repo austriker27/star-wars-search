@@ -2,12 +2,18 @@
 
 $.ajax({
   type: 'GET',
-  url: 'http://swapi.co/api/people/',
+  url: 'https://swapi.co/api/people/',
   data: {userId: '1'},
+
+  headers: {
+    'Access-Control-Allow-Origin': '*',
+  },
+
   beforeSend: () => {
     // append loading image
     $('#search-form').html('<div class="Loading"><img src="/images/loading.gif" alt="loading image" /> </div>');
   },
+
   success: (data) => {
     // this is what you do with the data
     $('search-form').empty();
