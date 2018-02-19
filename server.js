@@ -40,10 +40,10 @@ request(options, (error, response, body) => {
 
 
 
-APP.get('*', (request, response) => {
+app.get('/', (request, response) => {
   response.sendFile('index.html', {root: './public'})
 });
 
-APP.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`)
 });
