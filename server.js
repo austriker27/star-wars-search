@@ -1,15 +1,15 @@
 'use strict';
 
-const EXPRESS = require('express');
-const PARSER = require('body-parser');
+const express = require('express');
+const parser = require('body-parser');
 
-const APP = EXPRESS();
+const app = express();
 const PORT = process.env.PORT || 3000;
 const request = require('request');
 
-APP.use(PARSER.json());
-APP.use(PARSER.urlencoded({ extended: true }));
-APP.use(EXPRESS.static('./public'));
+app.use(parser.json());
+app.use(parser.urlencoded({ extended: true }));
+app.use(express.static('./public'));
 
 const API_URL = (`http://swapi.co/api/people/`)
 
@@ -40,10 +40,10 @@ request(options, (error, response, body) => {
 
 
 
-// APP.get('*', (request, response) => {
-//   response.sendFile('index.html', {root: './public'})
-// });
+APP.get('*', (request, response) => {
+  response.sendFile('index.html', {root: './public'})
+});
 
-// APP.listen(PORT, () => {
-//   console.log(`listening on port ${PORT}`)
-// });
+APP.listen(PORT, () => {
+  console.log(`listening on port ${PORT}`)
+});
