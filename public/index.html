@@ -5,23 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Star Wars Search</title>
-  <!-- <link rel="stylesheet" type="text/css" href="/css/style.css"> -->
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" href="./styles/main.css">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/> -->
+  <!-- <link rel="stylesheet" href="./styles/bulma.css"/>  -->
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
 </head>
+
 <body>
-  <form action="" id="search-form" action="/" method="post">
-    <input type="text" placeholder="Search by character name" class="searchValue">
-    <input type="submit" value="Search"/>
-  </form>
 
-  <p class="results"></p>
+  <!-- search box -->
+  <div id="searchContainer">
+    <div class="formContainer">
 
-  <p>GENDER</p>
+      <form action="" id="search-form" action="/" method="post">
+        <div class="control">
+          <input type="text" placeholder="Search by character name" class="searchValue  float-left">
+        </div>
 
-  <button class="genderFilter">Filter by gender</button>
+        <div class="clear-float"></div>
 
-  <table class="characterTable"></table>
-  
+        <div class="control">
+          <input type="submit" value="Search" class="searchBtn"/>
+        </div>
+
+      </form>
+    </div>
+
+    <p class="results"></p>
+
+    <p class="gender">gender</p>
+
+    <div class="field">
+      <label class="genderFilter"></label>
+      <div class="control">
+          <div class="selectGender">
+            <select>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+            </select>
+          </div>
+        </div>
+    </div>
+
+    <article class="">
+      <ul class="characterList"></ul>
+    </article>
+  </div>
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
