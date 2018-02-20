@@ -45,13 +45,12 @@
       <label class="genderFilter"></label>
       <div class="control">
           <div class="selectGender">
-            <select class="genderFilterTarget">
-              <option selected="true" disabled="disabled">Filter by gender</option>
+            <select class="genderFilterTarget" data-default-value="default">
+              <option selected="true" disabled="disabled" value="default">Filter by gender</option>
               <option value="female" id="femaleFilter">Female</option>
               <option value="male" id="maleFilter">Male</option>
               <option value="hermaphrodite" id="hermaphroditeFilter">Hermaphrodite</option>    
             </select>
-            <input type="reset" value="reset" />
           </div>
         </div>
       <p class="gender float-right">gender</p>
