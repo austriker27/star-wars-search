@@ -32,8 +32,8 @@ $('#search-form').submit((event) => {
     success: (response) => {
       $('#search-form').empty();
       $('#Loading').remove();
-      console.log(response);
-      $('.characterTable').append(response.name);
+      console.log(response.results[0].name);
+      $('.characterTable').append(response.results[0].name);
     },
     
     error: () => {
