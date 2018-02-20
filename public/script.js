@@ -12,7 +12,7 @@ $('#search-form').submit((event) => {
 
   let apiUrl = `https://swapi.co/api/people/?search=${searchValue}`;
 
-  $('.characterTable').text('');
+  $('.characterList').text('');
 
   console.log({apiUrl});
   console.log($searchValueElement);
@@ -38,11 +38,13 @@ $('#search-form').submit((event) => {
         // for loop over the response and render them to the table div
         response.results.forEach(function(response) {
           counter++;
-          $('.characterTable')
-            .append(`<p class='characterName'>${response.name}</p>`)
-            .append(`<p class='${response.gender}'>${response.gender}</p>`)
-            .append(`<p class='characterHairColor'>${response.hair_color}</p>`)
-            .append(`<p class='characterEyeColor'>${response.eye_color}</p>`);
+          $('.characterList')
+            .append(`<li class='ph3 pv3 bb b--light-silver'>
+              <p class='characterName'>${response.name}</p>
+              <p class='${response.gender}'>${response.gender}</p>
+              <p class='characterHairColor'>${response.hair_color}</p>
+              <p class='characterEyeColor'>${response.eye_color}</p>
+            </li>`);
         });
         $('.results').text(`${counter} results`);
         // if(response.next){
