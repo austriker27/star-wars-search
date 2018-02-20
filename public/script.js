@@ -40,10 +40,10 @@ $('#search-form').submit((event) => {
           counter++;
           $('.characterList')
             .append(`<li class=''>
-              <p class='characterName'>${response.name}</p>
-              <p class='${response.gender}'>${response.gender}</p>
-              <p class='characterHairColor'>${response.hair_color}</p>
-              <p class='characterEyeColor'>${response.eye_color}</p>
+              <p class='characterName'>${response.name} • </p> 
+              <p class='characterGender ${response.gender}'>${response.gender} • </p>
+              <p class='characterHairColor'>${response.hair_color} • </p>
+              <p class='characterEyeColor'>${response.eye_color} • </p>
             </li>`);
         });
         $('.results').text(`${counter} results`);

@@ -1,8 +1,124 @@
+@font-face{
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Bold.ttf") format("ttf"),
+       url("../fonts/Montserrat-Regular.ttf") format("ttf");
+}
+
 * {
   box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.clear-float {
+  float: none;
+}
+
+.float-left {
+  float: left;
 }
 
 body {
   background-color: #F7F8FA;
+  width: 80%;
+  font-family: 'Montserrat', sans-serif;
 }
 
+.searchContainer{
+  width: 80%;
+  margin: 0 auto;
+}
+
+#searchContainer > div.formContainer {
+  padding: 2%;
+  margin-top: 5%;
+  background-color: #FFFFFF;
+}
+
+.search-form {
+  /* padding: 2em; */
+  width: 50%;
+}
+
+
+
+.searchValue {
+  width: 50%;
+  border: 1px solid #E1E2E6;
+  background-color: #FAFBFC;
+  padding: 2%;
+  height: 15px;
+}
+
+.searchBtn {
+  background-color: #52A2FF;
+  color: white;
+  padding: 1% 2% 1% 2%;
+  text-decoration: none;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+
+.selectGender {
+  border: 1px solid #E1E2E6;
+  width: 120px;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  padding: 2px;
+  background: #fafafa url("../images/chevron--down.svg") no-repeat 90% 50%;
+}
+
+.selectGender select {
+  padding: 5px 8px;
+  width: 130%;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+}
+
+.selectGender select:focus {
+  outline: none;
+}
+
+.results{
+  font-family: 'Muli', sans-serif;
+  text-transform: uppercase;
+  color: #999B9E;
+}
+
+.gender{
+  font-family: 'Muli', sans-serif;
+  text-transform: uppercase;  
+  color: #999B9E;
+}
+
+.genderFilter{
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.characterName {
+  font-family: 'Muli', sans-serif;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.characterGender {
+  color: #B8BABF;
+  font-family: 'Muli', sans-serif;
+  font-size: 14px;
+}
+
+.characterHairColor {
+  color: #B8BABF;
+  font-family: 'Muli', sans-serif;
+  font-size: 14px;
+}
+
+.characterEyeColor {
+  color: #B8BABF;
+  font-family: 'Muli', sans-serif;
+  font-size: 14px;
+}
