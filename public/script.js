@@ -38,10 +38,21 @@ $('#search-form').submit((event) => {
       $('#loading').remove();
 
       let renderSearchResults = (response) => {
-        let counter = 0;
-        // for loop over the response and render them to the table div
+        let counter = 0, femaleCount = 0, maleCount = 0, hermaphroditeCount = 0;
+   
+        // for loop over the response
         response.results.forEach(function(response) {
           counter++;
+
+          // count the gender results
+          if(`${response.gender}` === 'female')
+            femaleCount++;
+          if(`${response.gender}` === 'male')
+            maleCount++;
+          if(`${response.gender}` === 'hermaphrodite')
+            hermaphroditeCount++;
+          
+          // render the search results to the DOM
           $('.characterList')
             .append(
               `<li class='characterLi ${response.gender}'>
@@ -54,6 +65,7 @@ $('#search-form').submit((event) => {
               </li>`);
         });
 
+        // counts total results and appends DOM
         if(`${counter}` === 1 ){
           $('.results').text(`${counter} result`);
         } else if (`${counter}` > 1) {
@@ -62,6 +74,11 @@ $('#search-form').submit((event) => {
           $('.results').text(`0 results`);
         }
         
+        // adds totals to the filter tab for each gender
+        $('#femaleFilter').text(`Female (${femaleCount})`);
+        $('#maleFilter').text(`Male (${maleCount})`);
+        $('#hermaphroditeFilter').text(`Hermaphrodite (${hermaphroditeCount})`);
+
         
         // if(response.next){
         // TODO : write function for results.next if multiple pages
