@@ -56,6 +56,7 @@ body {
   text-decoration: none;
   border-radius: 3px;
   margin-left: 5px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .selectGender {
@@ -82,6 +83,14 @@ body {
   outline: none;
 }
 
+.characterLi {
+  list-style: none;
+  border: 1px solid #E1E2E6;
+  background-color: #FFFFFF;
+  padding: 3% 2% 3% 2%;
+} 
+
+
 .results{
   font-family: 'Muli', sans-serif;
   text-transform: uppercase;
@@ -103,22 +112,27 @@ body {
   font-family: 'Muli', sans-serif;
   font-size: 16px;
   text-transform: capitalize;
+  margin: 0 0 1px 0;
 }
 
 .characterGender {
   color: #B8BABF;
   font-family: 'Muli', sans-serif;
   font-size: 14px;
+  text-transform: capitalize;
+
 }
 
 .characterHairColor {
   color: #B8BABF;
   font-family: 'Muli', sans-serif;
   font-size: 14px;
+  text-transform: capitalize;
 }
 
 .characterEyeColor {
   color: #B8BABF;
   font-family: 'Muli', sans-serif;
   font-size: 14px;
+  text-transform: capitalize;
 }

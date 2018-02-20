@@ -39,11 +39,11 @@ $('#search-form').submit((event) => {
         response.results.forEach(function(response) {
           counter++;
           $('.characterList')
-            .append(`<li class=''>
-              <p class='characterName'>${response.name} • </p> 
-              <p class='characterGender ${response.gender}'>${response.gender} • </p>
-              <p class='characterHairColor'>${response.hair_color} • </p>
-              <p class='characterEyeColor'>${response.eye_color} • </p>
+            .append(`<li class='characterLi'>
+              <p class='characterName'>${response.name} </p> 
+              <span class='characterGender ${response.gender}'>${response.gender} • </span>
+              <span class='characterHairColor'>${response.hair_color} hair • </span>
+              <span class='characterEyeColor'>${response.eye_color} eyes </span>
             </li>`);
         });
         $('.results').text(`${counter} results`);
