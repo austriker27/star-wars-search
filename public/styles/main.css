@@ -57,17 +57,20 @@ body {
   background-color: #FAFBFC;
   padding: 2%;
   height: 38px;
+  font-family: 'Muli', sans-serif;
   font-size: 16px;
 }
 
 .searchBtn {
   background-color: #52A2FF;
-  color: white;
+  color: #FFFFFF;
   padding: 1% 2% 1% 2%;
   text-decoration: none;
   border-radius: 3px;
-  margin-left: 5px;
-  font-family: 'Montserrat', sans-serif;
+  margin-left: 2%;
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
   width: 18%;
   min-width: 70px;
   height: 38px;
