@@ -119,7 +119,14 @@ $('#search-form').submit((event) => {
 // };
 
 $('.genderFilterTarget').change(function() {
-  $('.characterLi').filter('.male').toggleClass('hide');
+  $('.characterLi').show();
+  let selectedGender = $(this).val();
+  console.log(selectedGender); // male
+  $('.characterLi')
+    .filter( function() {
+      return(this.className !== 'characterLi ' + selectedGender);
+    })
+    .hide();
 });
 
 // when female filter is selected show all characterLi that contain a class of female
