@@ -1,7 +1,10 @@
 'use strict';
 
-// function to grab the data from the search bar and use it to send to the server
 
+
+//-------------------------------------------------------------
+// function to send query data to SWAPI
+//-------------------------------------------------------------
 
 $('#search-form').submit((event) => {
   event.preventDefault();
@@ -25,13 +28,14 @@ $('#search-form').submit((event) => {
     dataType: 'json',
 
     beforeSend: () => {
-      $('#search-form')
-        .append('<div id="Loading"><img src="/images/loading.png" alt="loading image" /> </div>');
+      $('.searchLandingText')
+        .empty()
+        .append('<div id="loading"><img src="/images/loading.png" alt="loading image" /> </div>');
     },
 
     success: (response) => {
       $('#searchValue').empty();
-      $('#Loading').remove();
+      $('#loading').remove();
 
       let renderSearchResults = (response) => {
         let counter = 0;
@@ -39,14 +43,26 @@ $('#search-form').submit((event) => {
         response.results.forEach(function(response) {
           counter++;
           $('.characterList')
-            .append(`<li class='characterLi'>
-              <p class='characterName'>${response.name} </p> 
-              <span class='characterGender ${response.gender}'>${response.gender} • </span>
-              <span class='characterHairColor'>${response.hair_color} hair • </span>
-              <span class='characterEyeColor'>${response.eye_color} eyes </span>
-            </li>`);
+            .append(
+              `<li class='characterLi ${response.gender}'>
+                <p class='characterName'>${response.name} </p> 
+                <div class='characterSubtitles'>
+                  <span class='characterGender ${response.gender}'>${response.gender}</span> <span> • </span> 
+                  <span class='characterHairColor ${response.hair_color}'>${response.hair_color} </span> <span class="${response.hair_color}"> hair • </span>
+                  <span class='characterEyeColor ${response.eye_color}'>${response.eye_color} </span> <span> eyes </span>
+                </div>
+              </li>`);
         });
-        $('.results').text(`${counter} results`);
+
+        if(`${counter}` === 1 ){
+          $('.results').text(`${counter} result`);
+        } else if (`${counter}` > 1) {
+          $('.results').text(`${counter} results`);
+        } else {
+          $('.results').text(`0 results`);
+        }
+        
+        
         // if(response.next){
         // TODO : write function for results.next if multiple pages
         //   renderSearchResults(response.next);
@@ -88,3 +104,22 @@ $('#search-form').submit((event) => {
   //     console.log('error from SWAPI');
   //   });
 });
+
+//-------------------------------------------------------------
+// FUNCTION FOR GENDER FILTER
+//-------------------------------------------------------------
+
+// $('#femaleFilter').change = () => {
+//   $('.characterList').forEach = () => {
+//     if(!this.className.includes('female')){
+//       $('.characterList').toggleClass('hide');
+//       // .selectmenu('refresh', true);
+//     }
+//   };
+// };
+
+$('.genderFilterTarget').change(function() {
+  $('.characterLi').filter('.male').toggleClass('hide');
+});
+
+// when female filter is selected show all characterLi that contain a class of female

@@ -12,9 +12,9 @@
   <!-- <link rel="stylesheet" href="./styles/bulma.css"/>  -->
 
   <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+  
 </head>
 
 <body>
@@ -37,24 +37,32 @@
       </form>
     </div>
 
-    <p class="results"></p>
+    <p class="results float-left">0 results</p>
 
-    <p class="gender">gender</p>
+    <div class="clear-float"></div>
 
     <div class="field">
       <label class="genderFilter"></label>
       <div class="control">
           <div class="selectGender">
-            <select>
-              <option value="female">Female</option>
-              <option value="male">Male</option>
+            <select class="genderFilterTarget">
+              <option selected="true" disabled="disabled">Filter by gender</option>
+              <option value="female" id="femaleFilter">Female</option>
+              <option value="male" id="maleFilter">Male</option>
             </select>
           </div>
         </div>
     </div>
 
-    <article class="">
+    <p class="gender float-right">gender</p>
+    <div class="clear-float"></div>
+
+    <article class="resultsBox">
       <ul class="characterList"></ul>
+      <div class="searchLandingText">
+        <img src="./images/vader-icon.svg" alt="Picture of vader's helmet">
+        <h2>Search by character name</h2>
+      </div>
     </article>
   </div>
 </body>
