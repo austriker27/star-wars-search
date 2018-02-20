@@ -2,12 +2,13 @@
   "name": "star-wars-search",
   "version": "1.0.0",
   "description": "just another star wars search app, beautifully styled",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "jest -i --coverage",
     "watch": "webpack-dev-server --inline --hot",
     "start": "node index.js",
-    "build": "webpack"
+    "build": "webpack",
+    "nodemon": "nodemon"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "cors": "^2.8.4",
     "css-loader": "^0.28.9",
     "eslint": "^4.17.0",
     "eslint-plugin-react": "^7.6.1",
@@ -47,5 +49,8 @@
     "superagent": "^3.8.2",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.15.1"
   }
 }
