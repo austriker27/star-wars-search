@@ -30,10 +30,28 @@ $('#search-form').submit((event) => {
     },
 
     success: (response) => {
-      $('#search-form').empty();
+      $('#searchValue').empty();
       $('#Loading').remove();
-      console.log(response.results[0].name);
-      $('.characterTable').append(response.results[0].name);
+
+      let renderSearchResults = (response) => {
+        let counter = 0;
+        // for loop over the response and render them to the table div
+        response.results.forEach(function(response) {
+          counter++;
+          $('.characterTable')
+            .append(`<p class='characterName'>${response.name}</p>`)
+            .append(`<p class='${response.gender}'>${response.gender}</p>`)
+            .append(`<p class='characterHairColor'>${response.hair_color}</p>`)
+            .append(`<p class='characterEyeColor'>${response.eye_color}</p>`);
+        });
+        $('.results').text(`${counter} results`);
+        // if(response.next){
+        // TODO : write function for results.next if multiple pages
+        //   renderSearchResults(response.next);
+        // }
+      };
+      renderSearchResults(response);
+
     },
     
     error: () => {
