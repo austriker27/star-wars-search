@@ -26,7 +26,7 @@ $('#search-form').submit((event) => {
 
     beforeSend: () => {
       $('#search-form')
-        .append('<div id="Loading"><img src="/images/loading.gif" alt="loading image" /> </div>');
+        .append('<div id="Loading"><img src="/images/loading.png" alt="loading image" /> </div>');
     },
 
     success: (response) => {
@@ -39,7 +39,7 @@ $('#search-form').submit((event) => {
         response.results.forEach(function(response) {
           counter++;
           $('.characterList')
-            .append(`<li class='ph3 pv3 bb b--light-silver'>
+            .append(`<li class=''>
               <p class='characterName'>${response.name}</p>
               <p class='${response.gender}'>${response.gender}</p>
               <p class='characterHairColor'>${response.hair_color}</p>
