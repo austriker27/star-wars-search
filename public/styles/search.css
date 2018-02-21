@@ -1,0 +1,41 @@
+
+.searchContainer{
+  width: 80%;
+  margin: 0 auto;
+}
+
+#searchContainer > div.formContainer {
+  padding: 2%;
+  margin-top: 5% 0 5% 0;
+  background-color: #FFFFFF;
+}
+
+.search-form {
+  width: 50%;
+}
+
+.searchValue {
+  width: 78%;
+  border: 1px solid #E1E2E6;
+  background-color: #FAFBFC;
+  padding: 2%;
+  height: 38px;
+  font-family: 'Muli', sans-serif;
+  font-size: 16px;
+}
+
+.searchBtn {
+  background-color: #52A2FF;
+  color: #FFFFFF;
+  padding: 1% 2% 1% 2%;
+  text-decoration: none;
+  border-radius: 3px;
+  margin-left: 2%;
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  width: 18%;
+  min-width: 70px;
+  height: 38px;
+  border: 0;
+}
