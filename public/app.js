@@ -67,14 +67,13 @@ $('#search-form').submit((event) => {
           }
         });
 
-        
-
         // counts total results from all genders
         let totalResults = parseInt(`${otherCount}`) + parseInt(`${maleCount}`) +  parseInt(`${femaleCount}`);
 
         // appends to the DOM - grammatically correct
-        if(`${totalResults}` === 1 ){
+        if(totalResults === 1 ){
           $('.results').text(`${totalResults} result`);
+          console.log('here');
         } else {
           $('.results').text(`${totalResults} results`);
         }
