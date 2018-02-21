@@ -43,14 +43,13 @@ It is pretty easy to get off the ground with this website.
 ## Future TODO
 - Build out the ability for more than 10 results to come back from SWAPI (Pagination on SWAPI's end)
 - Write tests!
+- Remove hair color or eye color if the API response for a character is 'N/A', 'none', etc
 
 ## Contribute
 Feel free to contribute! Just submit a PR and I'll take a look.
 
 ## Credits
 Thanks to Soylent for powering me through this project. 
-
-#### Anything else that seems useful
 
 ## License
 MIT License is applicable here.
