@@ -83,8 +83,9 @@ $('#search-form').submit((event) => {
         $('#maleFilter').text(`Male (${maleCount})`);
         $('#otherFilter').text(`Other (${otherCount})`);
 
-        // remove background color from the box
-        $('.resultsBox').css('opacity', '100%');
+        // change the results box div so it only takes up the same space as the character results
+        $('.resultsBox').css('height', '100%');
+        $('.resultsBox').css('background-color', '#F7F8FA');
 
       };
       renderSearchResults(response);
