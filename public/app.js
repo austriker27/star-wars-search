@@ -31,7 +31,6 @@ $('#search-form').submit((event) => {
       let counter = 0, femaleCount = 0, maleCount = 0, otherCount = 0;
 
       let renderSearchResults = (response) => {
-        
    
         //  loop over the response
         response.results.forEach(function(response) {
@@ -86,11 +85,6 @@ $('#search-form').submit((event) => {
         $('.resultsBox').css('height', '100%');
         $('.resultsBox').css('background-color', '#F7F8FA');
         $('.resultsBox').css('box-shadow', 'none');
-        // $('.resultsBox').css('background-color', '#F7F8FA');
-
-
-        // box-shadow: 0px 1px 3px #E1E2E6;
-        // box-shadow: 0px 4px 14px #E1E2E6;
 
       };
       renderSearchResults(response);
