@@ -17,10 +17,6 @@ $('#search-form').submit((event) => {
 
   $('.characterList').text('');
 
-  console.log({apiUrl});
-  console.log($searchValueElement);
-  console.log(searchValue);
-
   $.ajax({
     url: `${apiUrl}`,
     type: 'GET',
