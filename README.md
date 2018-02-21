@@ -1,7 +1,3 @@
-# star-wars-search
-an app that allows you to search for your favorite, or least favorite, star wars character
-
-
 ## A Star Wars Character Search
 This is a very tiny web app that allows you to search for your favorite, or least favorite, star wars character. It uses [SWAPI](https://swapi.co/) as an API endpoint for your query. It will return data from SWAPI for the character search. Data includes the characters name, gender, hair color and eye color. A user can search for a character with any letters and then filter results by gender. With the current implementation the app only returns the first 10 results from SWAPI.
 
@@ -31,12 +27,10 @@ This app is using the following API endpoint at SWAPI, where `${searchValue}` is
 https://swapi.co/api/people/?search=${searchValue}
 ```
 
-## Installation
-Provide step by step series of examples and explanations about how to get a development env running.
-
 ## API Reference
+- SWAPI docs for people are [here](https://swapi.co/documentation#people).
+- SWAPI docs for searching are [here](https://swapi.co/documentation#search). 
 
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
 
 ## Tests
 At this time there are no tests. 
