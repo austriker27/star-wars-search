@@ -4,7 +4,7 @@
   "description": "just another star wars search app, beautifully styled",
   "main": "server.js",
   "scripts": {
-    "test": "jest -i --coverage",    "": "webpack-dev-server --inline --hot",
+    "test": "jest -i --coverage",
     "start": "node index.js",
     "nodemon": "nodemon"
   },
