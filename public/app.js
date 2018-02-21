@@ -57,7 +57,17 @@ $('#search-form').submit((event) => {
                   <span class='characterEyeColor ${response.eye_color}'>${response.eye_color} </span> <span> eyes </span>
                 </div>
               </li>`);
+
+          // hide hair and eye color if not applicable
+          if( `${response.hair_color}` === 'N/A hair'){
+            $('.characterHairColor').hide();
+          }
+          if( `${response.eye_color}` === 'N/A eyes'){
+            $('.characterEyeColor').hide();
+          }
         });
+
+        
 
         // counts total results from all genders
         let totalResults = parseInt(`${otherCount}`) + parseInt(`${maleCount}`) +  parseInt(`${femaleCount}`);
