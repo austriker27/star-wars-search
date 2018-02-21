@@ -129,9 +129,47 @@ $('#search-form').submit((event) => {
 $('.genderFilterTarget').change(function() {
   $('.characterLi').show();
   let selectedGender = $(this).val();
-  $('.characterLi')
-    .filter( function() {
-      return(this.className !== 'characterLi ' + selectedGender);
-    })
-    .hide();
+
+  if(selectedGender == 'characterLi male'){
+    $('.characterLi')
+      .hide()
+      .filter( function() {
+        return(this.className == 'characterLi male');
+      })
+      .show();
+  }
+  else if(selectedGender == 'characterLi female'){
+    $('.characterLi')
+      .hide()
+      .filter( function() {
+        return(this.className == 'characterLi female');
+      })
+      .show();
+  }
+  else{
+    $('.characterLi')
+      .hide()
+      .filter( function() {
+        return(this.className == 'characterLi N/A' || this.className == 'characterLi other' || this.className == 'characterLi Hermaphrodite');
+      })
+      .show();
+  }
+});
+
+
+$('.genderFilterTarget').change(function() {
+
+  $('.characterLi').show();
+  let selectedGender = $(this).val();
+
+  if(selectedGender === 'other') {
+    return(this.className == 'characterLi N/A' || selectedGender == 'characterLi other' || selectedGender == 'characterLi Hermaphrodite');
+    
+  } else {
+    $('.characterLi')
+      .filter( function() {
+        return(this.className !== 'characterLi ' + selectedGender);
+      })
+      .hide();
+  }
 });
