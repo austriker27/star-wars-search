@@ -6,12 +6,12 @@ const parser = require('body-parser');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const Request = require('request');
-const cors = require('cors');
+// const cors = require('cors');
 
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
 app.use(express.static('./public'));
-app.use(cors());
+// app.use(cors());
 
 const API_URL = (`http://swapi.co/api/people/`);
 

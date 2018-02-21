@@ -17,10 +17,6 @@ $('#search-form').submit((event) => {
 
   $('.characterList').text('');
 
-  console.log({apiUrl});
-  console.log($searchValueElement);
-  console.log(searchValue);
-
   $.ajax({
     url: `${apiUrl}`,
     type: 'GET',
@@ -38,7 +34,7 @@ $('#search-form').submit((event) => {
       $('#loading').remove();
 
       let renderSearchResults = (response) => {
-        let counter = 0, femaleCount = 0, maleCount = 0, hermaphroditeCount = 0;
+        let counter = 0, femaleCount = 0, maleCount = 0, otherCount = 0;
    
         // for loop over the response
         response.results.forEach(function(response) {
@@ -47,10 +43,10 @@ $('#search-form').submit((event) => {
           // count the gender results
           if(`${response.gender}` === 'female')
             femaleCount++;
-          if(`${response.gender}` === 'male')
+          else if(`${response.gender}` === 'male')
             maleCount++;
-          if(`${response.gender}` === 'hermaphrodite')
-            hermaphroditeCount++;
+          else
+            otherCount++;
           
           // render the search results to the DOM
           $('.characterList')
@@ -77,7 +73,7 @@ $('#search-form').submit((event) => {
         // adds totals to the filter tab for each gender
         $('#femaleFilter').text(`Female (${femaleCount})`);
         $('#maleFilter').text(`Male (${maleCount})`);
-        $('#hermaphroditeFilter').text(`Hermaphrodite (${hermaphroditeCount})`);
+        $('#otherFilter').text(`Other (${otherCount})`);
 
         
         // if(response.next){
@@ -127,11 +123,23 @@ $('#search-form').submit((event) => {
 //-------------------------------------------------------------
 
 $('.genderFilterTarget').change(function() {
+
   $('.characterLi').show();
   let selectedGender = $(this).val();
-  $('.characterLi')
-    .filter( function() {
-      return(this.className !== 'characterLi ' + selectedGender);
-    })
-    .hide();
+
+  if(selectedGender === 'other') {
+    console.log(this.className);
+    $('.characterLi')
+      .filter( function() {
+        return(this.className === 'characterLi male' || this.className === 'characterLi female');
+      })
+      .hide();
+
+  } else {
+    $('.characterLi')
+      .filter( function() {
+        return(this.className !== 'characterLi ' + selectedGender);
+      })
+      .hide();
+  }
 });
