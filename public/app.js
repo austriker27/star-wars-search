@@ -9,7 +9,6 @@ $('#search-form').submit((event) => {
 
   let $searchValueElement = $('.searchValue');
   let searchValue = $searchValueElement.val().trim().toString();
-
   let apiUrl = `https://swapi.co/api/people/?search=${searchValue}`;
 
   $('.characterList').text('');
@@ -32,7 +31,6 @@ $('#search-form').submit((event) => {
       let counter = 0, femaleCount = 0, maleCount = 0, otherCount = 0;
 
       let renderSearchResults = (response) => {
-        
    
         //  loop over the response
         response.results.forEach(function(response) {
@@ -83,8 +81,10 @@ $('#search-form').submit((event) => {
         $('#maleFilter').text(`Male (${maleCount})`);
         $('#otherFilter').text(`Other (${otherCount})`);
 
-        // remove background color from the box
-        $('.resultsBox').css('opacity', '100%');
+        // change the results box div so it only takes up the same space as the character results & change background color
+        $('.resultsBox').css('height', '100%');
+        $('.resultsBox').css('background-color', '#F7F8FA');
+        $('.resultsBox').css('box-shadow', 'none');
 
       };
       renderSearchResults(response);

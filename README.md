@@ -32,7 +32,7 @@ At this time there are no tests.
 
 ## How to use?
 
-![A screencaptured gif of how to use this website](https://cl.ly/0g1C0I0T370Z/Screen%20Recording%202018-02-21%20at%2011.26%20AM.gif)
+![A screencaptured gif of how to use this website](https://cl.ly/461q3t3G3Z2z/Screen%20Recording%202018-02-21%20at%2001.06%20PM.gif)
 
 It is pretty easy to get off the ground with this website. 
 1. Search for your favorite character

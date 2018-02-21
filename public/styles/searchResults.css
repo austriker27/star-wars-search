@@ -1,8 +1,8 @@
-
 .characterList{
   padding-left: 0px;
   box-shadow: 0px 1px 3px #E1E2E6;
   box-shadow: 0px 4px 14px #E1E2E6;
+  margin: 5% auto;
 }
 
 .characterLi {
@@ -25,10 +25,8 @@
   border: 1px solid #F7F8FA;
 }
 
-
 #loading > img {
   width: 10%;
-  /* display: block; */
   margin-left: auto;
   margin-right: auto;
   margin-top: 30%;
@@ -63,30 +61,11 @@
   font-family: 'Muli', sans-serif;
   font-weight: 300;
   font-size: 14px;
-  /* text-transform: capitalize; */
-}
-.characterGender {
-  /* color: #B8BABF;
-  font-family: 'Muli', sans-serif;
-  font-size: 14px; */
-  text-transform: capitalize;
-
 }
 
-.characterHairColor {
-  /* color: #B8BABF;
-  font-family: 'Muli', sans-serif;
-  font-size: 14px; */
+.characterGender, .characterHairColor, .characterEyeColor  {
   text-transform: capitalize;
 }
-
-.characterEyeColor {
-  /* color: #B8BABF;
-  font-family: 'Muli', sans-serif;
-  font-size: 14px; */
-  text-transform: capitalize;
-}
-
 
 .resultsBox{
   width: 100%;
