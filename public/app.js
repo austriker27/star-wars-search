@@ -83,9 +83,15 @@ $('#search-form').submit((event) => {
         $('#maleFilter').text(`Male (${maleCount})`);
         $('#otherFilter').text(`Other (${otherCount})`);
 
-        // change the results box div so it only takes up the same space as the character results
+        // change the results box div so it only takes up the same space as the character results & change background color
         $('.resultsBox').css('height', '100%');
         $('.resultsBox').css('background-color', '#F7F8FA');
+        $('.resultsBox').css('box-shadow', 'none');
+        // $('.resultsBox').css('background-color', '#F7F8FA');
+
+
+        // box-shadow: 0px 1px 3px #E1E2E6;
+        // box-shadow: 0px 4px 14px #E1E2E6;
 
       };
       renderSearchResults(response);
