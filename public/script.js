@@ -11,7 +11,6 @@ $('#search-form').submit((event) => {
 
   let $searchValueElement = $('.searchValue');
   let searchValue = $searchValueElement.val().trim().toString();
-  console.log(searchValue);
 
   let apiUrl = `https://swapi.co/api/people/?search=${searchValue}`;
 
@@ -32,9 +31,10 @@ $('#search-form').submit((event) => {
     success: (response) => {
       $('#searchValue').empty();
       $('#loading').remove();
+      let counter = 0, femaleCount = 0, maleCount = 0, otherCount = 0;
 
       let renderSearchResults = (response) => {
-        let counter = 0, femaleCount = 0, maleCount = 0, otherCount = 0;
+        
    
         // for loop over the response
         response.results.forEach(function(response) {
@@ -78,11 +78,12 @@ $('#search-form').submit((event) => {
         
         // if(response.next){
         // TODO : write function for results.next if multiple pages
-        //   renderSearchResults(response.next);
+        //         while response.next run the render function on the response
         // }
       };
       renderSearchResults(response);
 
+        
     },
     
     error: () => {
@@ -128,7 +129,6 @@ $('.genderFilterTarget').change(function() {
   let selectedGender = $(this).val();
 
   if(selectedGender === 'other') {
-    console.log(this.className);
     $('.characterLi')
       .filter( function() {
         return(this.className === 'characterLi male' || this.className === 'characterLi female');
