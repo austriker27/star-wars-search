@@ -8,11 +8,6 @@ This project uses continuous deployment via [Netlify](https://www.netlify.com/) 
   <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg"  height="144"/>
 </a>
 
-(https://www.netlify.com/img/global/badges/netlify-color-accent.svg)
-
-## Screenshots
-(https://cl.ly/0g1C0I0T370Z)
-
 ## Tech/framework used
 - jQuery
 - Vanilla JavaScript
@@ -36,6 +31,9 @@ https://swapi.co/api/people/?search=${searchValue}
 At this time there are no tests. 
 
 ## How to use?
+
+<div nobranding notitle class="cloudapp-embed" data-slug="0g1C0I0T370Z"><a href="https://cl.ly/0g1C0I0T370Z">Screen Recording 2018-02-21 at 11.26 AM.gif</a><script async src="https://embed.cl.ly/embedded.gz.js" charset="utf-8"></script></div>
+
 It is pretty easy to get off the ground with this website. 
 1. Search for your favorite character
 2. Peruse the results
