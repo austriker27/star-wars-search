@@ -32,7 +32,7 @@ At this time there are no tests.
 
 ## How to use?
 
-<div nobranding notitle class="cloudapp-embed" data-slug="0g1C0I0T370Z"><a href="https://cl.ly/0g1C0I0T370Z">Screen Recording 2018-02-21 at 11.26 AM.gif</a><script async src="https://embed.cl.ly/embedded.gz.js" charset="utf-8"></script></div>
+![A screencaptured gif of how to use this website](https://cl.ly/0g1C0I0T370Z/Screen%20Recording%202018-02-21%20at%2011.26%20AM.gif)
 
 It is pretty easy to get off the ground with this website. 
 1. Search for your favorite character
