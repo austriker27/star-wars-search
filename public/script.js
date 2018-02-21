@@ -161,10 +161,18 @@ $('.genderFilterTarget').change(function() {
 
   $('.characterLi').show();
   let selectedGender = $(this).val();
+  let otherGenderClassNames = 0;
+
+  console.log(selectedGender);
 
   if(selectedGender === 'other') {
-    return(this.className == 'characterLi N/A' || selectedGender == 'characterLi other' || selectedGender == 'characterLi Hermaphrodite');
-    
+    console.log(this.className);
+    $('.characterLi')
+      .filter( function() {
+        return(this.className === 'characterLi male' || this.className === 'characterLi female');
+      })
+      .hide();
+
   } else {
     $('.characterLi')
       .filter( function() {
@@ -173,3 +181,14 @@ $('.genderFilterTarget').change(function() {
       .hide();
   }
 });
+
+
+// $('.genderFilterTarget').change(function() {
+//   $('.characterLi').show();
+//   let selectedGender = $(this).val();
+//   $('.characterLi')
+//     .filter( function() {
+//       return(this.className !== 'characterLi ' + selectedGender);
+//     })
+//     .hide();
+// });
