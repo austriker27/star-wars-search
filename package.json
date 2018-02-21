@@ -4,10 +4,8 @@
   "description": "just another star wars search app, beautifully styled",
   "main": "server.js",
   "scripts": {
-    "test": "jest -i --coverage",
-    "watch": "webpack-dev-server --inline --hot",
+    "test": "jest -i --coverage",    "": "webpack-dev-server --inline --hot",
     "start": "node index.js",
-    "build": "webpack",
     "nodemon": "nodemon"
   },
   "repository": {
@@ -26,7 +24,6 @@
   "homepage": "https://github.com/austriker27/star-wars-search#readme",
   "dependencies": {
     "eslint": "^4.17.0",
-    "eslint-plugin-react": "^7.6.1",
     "express": "^4.16.2",
     "request": "^2.83.0",
     "superagent": "^3.8.2"
