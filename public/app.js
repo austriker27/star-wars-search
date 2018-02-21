@@ -34,7 +34,7 @@ $('#search-form').submit((event) => {
       let renderSearchResults = (response) => {
         
    
-        // for loop over the response
+        //  loop over the response
         response.results.forEach(function(response) {
           counter++;
 
@@ -82,6 +82,9 @@ $('#search-form').submit((event) => {
         $('#femaleFilter').text(`Female (${femaleCount})`);
         $('#maleFilter').text(`Male (${maleCount})`);
         $('#otherFilter').text(`Other (${otherCount})`);
+
+        // remove background color from the box
+        $('.resultsBox').css('opacity', '100%');
 
       };
       renderSearchResults(response);
