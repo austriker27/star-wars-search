@@ -117,9 +117,12 @@ body {
   padding: 3% 2% 3% 2%;
 } 
 
-.loading {
-  margin: 0 auto;
-  height: 250px;
+#loading > img {
+  width: 10%;
+  /* display: block; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30%;
 }
 
 .resultsGenderContainer {
