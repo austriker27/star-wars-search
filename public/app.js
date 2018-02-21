@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 //-------------------------------------------------------------
 // function to send query data to SWAPI
 //-------------------------------------------------------------
@@ -36,7 +34,7 @@ $('#search-form').submit((event) => {
       let renderSearchResults = (response) => {
         
    
-        // for loop over the response
+        //  loop over the response
         response.results.forEach(function(response) {
           counter++;
 
@@ -59,31 +57,37 @@ $('#search-form').submit((event) => {
                   <span class='characterEyeColor ${response.eye_color}'>${response.eye_color} </span> <span> eyes </span>
                 </div>
               </li>`);
+
+          // hide hair and eye color if not applicable
+          if( `${response.hair_color}` === 'N/A hair'){
+            $('.characterHairColor').hide();
+          }
+          if( `${response.eye_color}` === 'N/A eyes'){
+            $('.characterEyeColor').hide();
+          }
         });
 
-        // counts total results and appends DOM
-        if(`${counter}` === 1 ){
-          $('.results').text(`${counter} result`);
-        } else if (`${counter}` > 1) {
-          $('.results').text(`${counter} results`);
+        // counts total results from all genders
+        let totalResults = parseInt(`${otherCount}`) + parseInt(`${maleCount}`) +  parseInt(`${femaleCount}`);
+
+        // appends to the DOM - grammatically correct
+        if(totalResults === 1 ){
+          $('.results').text(`${totalResults} result`);
+          console.log('here');
         } else {
-          $('.results').text(`0 results`);
+          $('.results').text(`${totalResults} results`);
         }
-        
+
         // adds totals to the filter tab for each gender
         $('#femaleFilter').text(`Female (${femaleCount})`);
         $('#maleFilter').text(`Male (${maleCount})`);
         $('#otherFilter').text(`Other (${otherCount})`);
 
-        
-        // if(response.next){
-        // TODO : write function for results.next if multiple pages
-        //         while response.next run the render function on the response
-        // }
+        // remove background color from the box
+        $('.resultsBox').css('opacity', '100%');
+
       };
       renderSearchResults(response);
-
-        
     },
     
     error: () => {
@@ -91,32 +95,6 @@ $('#search-form').submit((event) => {
     },
 
   });
-
-  // david - method using fetch rather than jQuery, but getting error back from SWAPI
-  // link - https://blog.zingchart.com/2017/12/14/how-to-make-a-chart-using-fetch-rest-apis/
-  // const fetchParams = {
-  //   method: 'GET',
-  //   mode: 'cors',
-  // };
-
-  // const API_URL = `https://swapi.co/api/people/?search=boba`;
-
-  // fetch(API_URL, fetchParams)
-  //   .then(response => {
-  //     if(!res.ok) {
-  //       throw new TypeError(response.statusText);
-  //     }
-  //     return response.json();
-  //   })
-  //   .then(data => {
-  //     const character = data.results;
-  //     console.log(character);
-  //     $('.characterTable').append(character.name);
-      
-  //   })
-  //   .catch(error => {
-  //     console.log('error from SWAPI');
-  //   });
 });
 
 //-------------------------------------------------------------

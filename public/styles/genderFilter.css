@@ -1,0 +1,46 @@
+
+.gender{
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;  
+  font-size: 13px;
+  text-transform: uppercase;  
+  color: #999B9E;
+  padding-right: 2%;
+  letter-spacing: 1.8px;
+  margin: 4% 0 4% 0;
+}
+
+.genderFilter{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.selectGender {
+  border: 1px solid #E1E2E6;
+  position: relative;
+  right: 0px;
+  width: 156px;
+  float: right;
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 2px;
+  background: #FFFFFF url("../images/chevron--down.svg") no-repeat 90% 50%;
+  margin: 2% 0 2% 0;
+  box-shadow: 0px 1px 3px #E1E2E6;
+  box-shadow: 0px 4px 14px #E1E2E6;
+}
+
+.selectGender select {
+  padding: 5px 8px;
+  width: 130%;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+  font-family: 'Muli', sans-serif;
+  font-size: 14px;
+}
+
+.selectGender select:focus {
+  outline: none;
+}
