@@ -11,7 +11,6 @@ $('#search-form').submit((event) => {
 
   let $searchValueElement = $('.searchValue');
   let searchValue = $searchValueElement.val().trim().toString();
-  console.log(searchValue);
 
   let apiUrl = `https://swapi.co/api/people/?search=${searchValue}`;
 
